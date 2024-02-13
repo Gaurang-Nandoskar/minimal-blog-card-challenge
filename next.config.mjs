@@ -1,4 +1,13 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
-
-export default nextConfig;
+const nextConfig = {
+  pageExtensions: ["js", "jsx"],
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/card-page",
+        permanent: true,
+      },
+    ];
+  },
+};
